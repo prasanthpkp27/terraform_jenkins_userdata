@@ -1,14 +1,10 @@
-data "aws_vpc" "default" {
-   default = true
-}
-
 resource "aws_security_group" "common_sg" {
-  name = "${var.instance_name}_SG"
-  vpc_id = data.aws_vpc.default.id
+  name = "security-group-${var.region_code}-${var.env}-${var.groupname}-group-${var.instance_name}"
+  vpc_id = var.vpc_id
   description = "${var.instance_name} Security Group"
 
   tags = {
-        Name = "${var.instance_name}_SG"
+        Name = "security-group-${var.region_code}-${var.env}-${var.groupname}-group-${var.instance_name}"
     }
 }
 

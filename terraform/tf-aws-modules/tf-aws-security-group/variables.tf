@@ -10,6 +10,9 @@ variable "allowed_ports" {
   type = list(string)
 }
 
-//variable "vpc_id" {
-//
-//}
+variable "region_code" {}
+variable "env" {}
+variable "groupname" {}
+variable "vpc_id" {
+
+}

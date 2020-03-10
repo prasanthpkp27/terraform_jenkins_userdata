@@ -62,5 +62,13 @@ variable "whitelisted_ip" {
 variable "user_data" {
 
 }
+variable "region_code" {
 
-#variable "vpc_id" {}ß
+}
+variable "env" {
+
+}
+variable "groupname" {
+
+}
+variable "vpc_id" {}
